@@ -30,7 +30,7 @@ $version = "1.0.0"
 # $args
 $commands = commands
 if ('--version' -contains $cmd -or (!$cmd -and '-v' -contains $args)) {
-  echo $version
+  Write-Output $version
 }
 elseif (@($null, '--help', '/?') -contains $cmd -or $args[0] -contains '-h') { exec 'help' $args }
 elseif ($commands -contains $cmd) { exec $cmd $args }
