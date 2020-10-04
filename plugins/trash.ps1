@@ -33,7 +33,7 @@ function trash_size {
 }
 
 function clear_trash {
-  Clear-RecycleBin -Force
+  Clear-RecycleBin -Force -ErrorAction SilentlyContinue
   echo "Done!"
 }
 
